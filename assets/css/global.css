@@ -1,0 +1,75 @@
+
+*{
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    background-color: #000;
+    color: #FFF;
+}
+
+a {
+    margin-right: .5rem;
+    color: #fff;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.main {
+    margin: .5rem;
+    padding: .5rem;
+    border: 1px solid #FFF;
+    border-radius: .5rem;
+}
+
+.main::before,
+.main::after{
+    background-image: url('../img/background/background.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: '';
+    display: inline-block;
+    width: 140vw;
+    height:70vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.main::after{
+    content: '';
+    top: auto;
+    left: auto;
+    bottom: 0;
+    right: 0;
+    transform: rotate(180deg);
+}
+
+@media only screen and (min-width: 768px) {
+
+    .main {
+        max-width: 1024px;
+        margin: 2rem auto;
+    }
+    
+    .main::before {
+        width: 70vw;
+    }
+
+    .main::after {
+        width: 70vw;
+    }
+}
+
+.projects li a{
+    padding: .5rem;
+    margin-right: .5rem;
+    color: #fff;
+    text-decoration: none;
+}
